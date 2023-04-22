@@ -13,4 +13,4 @@ target/forge-test-thorntail.jar: $(shell find src/ -type f)
 
 .PHONY: run
 run:
-	docker run -ti -p 8080:8080 --pull=never jaxrs-docker-example
+	docker run -ti -p 8080:8080 --pull=never $(EXTRA_DOCKER_OPTS) jaxrs-docker-example
